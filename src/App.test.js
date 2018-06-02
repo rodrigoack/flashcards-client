@@ -8,17 +8,33 @@ import Main from './Main';
 Enzyme.configure({ adapter: new Adapter() });
 
 describe('App', () => {
+  let wrapper;
+
   describe('without a token param', () => {
+    beforeEach(() => {
+      wrapper = shallow(<App />);
+    });
+
     it('renders a Login view', () => {
-      const wrapper = shallow(<App />);
       expect(wrapper.find(Login)).toHaveLength(1);
+    });
+
+    it('does not render a Main view', () => {
+      expect(wrapper.find(Main)).toHaveLength(0);
     });
   });
 
   describe('with a token param', () => {
-    it('renders a Main view', () => {
-      const wrapper = shallow(<App />);
+    beforeEach(() => {
+      wrapper = shallow(<App />);
       wrapper.setState({token: 'foobar'});
+    });
+
+    it('does not render a Login view', () => {
+      expect(wrapper.find(Login)).toHaveLength(0);
+    });
+
+    it('renders a Main view', () => {
       expect(wrapper.find(Main)).toHaveLength(1);
     });
   });
