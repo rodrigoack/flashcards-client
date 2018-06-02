@@ -1,13 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Button from 'react-toolbox/lib/button/Button';
 import GithubIcon from './GithubIcon';
-import './LoginButton.css';
 
 const authorizeUrl = 'https://github.com/login/oauth.authorize';
 const clientId = 'foobar';
 const scope = 'user';
 
-const LoginButton = ({}) => (
+const LoginButton = () => (
   <Button
     raised
     accent
