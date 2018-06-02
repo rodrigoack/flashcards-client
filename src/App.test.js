@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import Adapter from 'enzyme-adapter-react-16';
 import Enzyme, { shallow } from 'enzyme';
 import App from './App';
@@ -7,8 +8,13 @@ import Main from './Main';
 
 Enzyme.configure({ adapter: new Adapter() });
 
-describe('App', () => {
+describe('<App />', () => {
   let wrapper;
+
+  it('renders without crashing', () => {
+    const div = document.createElement('div');
+    ReactDOM.render(<App />, div);
+  });
 
   describe('without a token param', () => {
     beforeEach(() => {

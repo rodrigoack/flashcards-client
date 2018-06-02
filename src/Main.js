@@ -1,7 +1,30 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-const Main = ({}) => (
-  <div></div>
+// Toolbox
+import Button from 'react-toolbox/lib/button/Button';
+
+// Components
+import Header from './Header';
+import Sidebar from './Sidebar';
+import Flashcards from './Flashcards';
+import FlashcardDialog from './FlashcardDialog';
+
+const Main = () => (
+  <div className="Main">
+    <Header />
+    <div className="Main-content">
+      <Sidebar />
+      <Flashcards />
+      <div className="Main-button">
+        <Button
+          icon="add"
+          floating
+          accent
+        />
+      </div>
+    </div>
+    <FlashcardDialog />
+  </div>
 )
 
 export default Main;
