@@ -6,6 +6,9 @@ import Navigation from 'react-toolbox/lib/navigation/Navigation';
 import Link from 'react-toolbox/lib/link/Link';
 import Avatar from 'react-toolbox/lib/avatar/Avatar';
 
+// Styles
+import './Header.css'
+
 const info = {};
 
 const Header = () => (

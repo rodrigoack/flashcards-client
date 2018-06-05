@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom';
 import Adapter from 'enzyme-adapter-react-16';
 import Enzyme, { shallow } from 'enzyme';
 import App from './App';
-import Login from './Login';
-import Main from './Main';
+import Login from './Login/Login';
+import Main from './Main/Main';
 
 Enzyme.configure({ adapter: new Adapter() });
 
