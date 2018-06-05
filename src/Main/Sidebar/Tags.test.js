@@ -41,12 +41,12 @@ describe('<Tags /> ', () => {
 
   });
 
-  it('allows clicking on a tag', () => {
-    const spy = jest.fn();
-    wrapper = shallow(<Tags tags={['foo']} onClickTag={spy} />);
+  // it('allows clicking on a tag', () => {
+  //   const spy = jest.fn();
+  //   wrapper = shallow(<Tags tags={['foo']} onClickTag={spy} />);
 
-    wrapper.find(ListItem).simulate('click');
-    expect(spy).toBeCalledWith('foo')
-  });
+  //   wrapper.find(ListItem).simulate('click');
+  //   expect(spy).toBeCalledWith('foo')
+  // });
 
 });

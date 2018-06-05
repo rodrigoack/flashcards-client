@@ -4,9 +4,9 @@ import Adapter from 'enzyme-adapter-react-16';
 import Enzyme, { shallow } from 'enzyme';
 
 import Main from './Main';
-import Header from './Header';
-import Sidebar from './Sidebar';
-import Flashcards from './Flashcards';
+import Header from './Header/Header';
+import Sidebar from './Sidebar/Sidebar';
+import Flashcards from './Flashcards/Flashcards';
 import FlashcardDialog from './FlashcardDialog';
 
 Enzyme.configure({ adapter: new Adapter() });

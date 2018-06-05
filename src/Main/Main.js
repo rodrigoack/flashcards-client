@@ -4,9 +4,9 @@ import React from 'react';
 import Button from 'react-toolbox/lib/button/Button';
 
 // Components
-import Header from './Header';
-import Sidebar from './Sidebar';
-import Flashcards from './Flashcards';
+import Header from './Header/Header';
+import Sidebar from './Sidebar/Sidebar';
+import Flashcards from './Flashcards/Flashcards';
 import FlashcardDialog from './FlashcardDialog';
 
 // Styles
