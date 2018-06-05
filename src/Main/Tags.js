@@ -5,6 +5,9 @@ import List from 'react-toolbox/lib/list/List';
 import ListItem from 'react-toolbox/lib/list/ListItem';
 import ListSubHeader from 'react-toolbox/lib/list/ListSubHeader';
 
+// Styles
+import './Tags.css';
+
 class Tags extends Component {
   renderTags() {
     const { tags } = this.props;

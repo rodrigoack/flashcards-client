@@ -9,6 +9,9 @@ import Sidebar from './Sidebar';
 import Flashcards from './Flashcards';
 import FlashcardDialog from './FlashcardDialog';
 
+// Styles
+import './Main.css';
+
 const Main = () => (
   <div className="Main">
     <Header />
