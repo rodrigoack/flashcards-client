@@ -1,7 +1,14 @@
 import React from 'react';
 
-const Sidebar = () => (
-  <div>Sidebar</div>
+// Components
+import Tags from './Tags';
+
+const Sidebar = (props) => (
+  <div className="Sidebar">
+    <Tags
+      tags={props.tags}
+    />
+  </div>
 );
 
 export default Sidebar;
