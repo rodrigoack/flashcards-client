@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 // Toolbox
 import Card from 'react-toolbox/lib/card/Card';
@@ -15,36 +15,42 @@ import Markdown from './Markdown';
 // Styles
 import './Flashcard.css';
 
+class Flashcard extends Component {
+  render() {
+    const { flashcard } = this.props;
 
-
-const Flashcard = () => (
-  <Card className="Flashcard">
-    <IconMenu
-    icon="more_vert"
-    menuRipple
-    className="Flashcard-menu">
-      <MenuItem
-      value="edit"
-      icon="edit"
-      caption="Edit"
-      />
-      <MenuDivider />
-      <MenuItem
-        value="signout"
-        icon="delete"
-        caption="Delete"
-      />
-    </IconMenu>
-    <CardText>
-      CardText
-    </CardText>
-    <CardActions className="Flashcard-actions">
-      <Button
-        icon="replay"
-        label="Flip"
-      />
-    </CardActions>
-  </Card>
-)
+    return(
+      <Card className="Flashcard">
+        <IconMenu
+        icon="more_vert"
+        menuRipple
+        className="Flashcard-menu">
+          <MenuItem
+          value="edit"
+          icon="edit"
+          caption="Edit"
+          />
+          <MenuDivider />
+          <MenuItem
+            value="signout"
+            icon="delete"
+            caption="Delete"
+          />
+        </IconMenu>
+        <CardText>
+          <div className="Flascard-question">
+            { flashcard.question }
+          </div>
+        </CardText>
+        <CardActions className="Flashcard-actions">
+          <Button
+            icon="replay"
+            label="Flip"
+          />
+        </CardActions>
+      </Card>
+    )
+  }
+}
 
 export default Flashcard;
