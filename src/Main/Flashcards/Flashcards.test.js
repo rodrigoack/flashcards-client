@@ -10,7 +10,7 @@ Enzyme.configure({ adapter: new Adapter() });
 describe('<Flashcards />', () => {
   it('renders a message when no tags', () => {
     const wrapper = shallow(<Flashcards />);
-    expect(wrapper.text()).toEqual('Select a tag on the left!');
+    expect(wrapper.text()).toEqual('Select a tag on the left');
   });
 
   it('renders a message when no flashcards', () => {
@@ -20,7 +20,7 @@ describe('<Flashcards />', () => {
 
   it('renders a message when tag and empty flashcards', () => {
     const wrapper = shallow(<Flashcards tagId={42} flashcards={[]} />);
-    expect(wrapper.text(Flashcard)).toEqual('add a flashcard for this tag');
+    expect(wrapper.text(Flashcard)).toEqual('Add a flashcard for this tag!');
   });
 
   it('renders a flashcard when tag and non-empty flashcards', () => {
