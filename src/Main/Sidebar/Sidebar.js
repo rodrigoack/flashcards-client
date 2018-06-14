@@ -10,6 +10,7 @@ const Sidebar = (props) => (
   <div className="Sidebar">
     <Tags
       tags={props.tags}
+      onClickTag={props.onClickTag}
     />
   </div>
 );

@@ -9,6 +9,10 @@ import ListSubHeader from 'react-toolbox/lib/list/ListSubHeader';
 import './Tags.css';
 
 class Tags extends Component {
+  handleClickTag(tag) {
+    this.props.onClickTag(tag);
+  }
+
   renderTags() {
     const { tags } = this.props;
 
@@ -27,6 +31,7 @@ class Tags extends Component {
           <ListItem
             key={index}
             caption={tag.name}
+            onClick={this.handleClickTag.bind(this, tag)}
           />
         )}
       </List>
